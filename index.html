@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food order website</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+       body {
+        display: flex;
+        background-color: whitesmoke;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+       }
+       .myForm {
+        width:50%;
+        margin: 5px auto;
+        padding: 10px 30px 40px;
+        color: white;
+        font-size: 20px;
+        border-radius: 10px;
+       }
+
+       .myForm h2{
+        color: blue;
+        text-align: center;
+       }
+
+       .myForm .input-Name{
+        display: block;
+        color: black;
+       }
+
+       .input input{
+        width: 100%;
+        height: 2.5em;
+        border: 1px solid blue;
+        box-shadow: 2px;
+        border-radius: 7px;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        margin: 15px 0px 20px;
+
+       }
+
+       .input textarea{
+        width: 100%;
+        height: 4em;
+        border: 1px solid blue;
+        box-shadow: 2px;
+        border-radius: 7px;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        margin: 15px 0px 20px;
+
+       }
+
+       .btn {
+        text-align: center;
+       }
+
+       .radio {
+        margin-top: 20px;
+        color: black;
+       }
+
+       .radio input{
+        transform: scale(1.5);
+
+       }
+
+       .food-items{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: black;
+       }
+
+       button{
+        background-color: blue;
+        font-size: 25px;
+        color: white;
+        border-radius: 8px;
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: 1px solid white;
+        box-shadow: 2px;
+       }
+
+       .myTable{
+        display: inline;
+        width: 50%;
+        padding-top: 100px;
+        border-collapse: collapse;
+        text-align: center;
+        height: 150px;
+       } 
+
+       table th, table td{
+        border: 2px solid blue;        
+       }
+
+       @media screen and (max-width:800px){
+        .myForm, .myTable {
+            background-color: whitesmoke;
+            width: 100%;
+        }
+       }
+
+    </style>
+</head>
+<body>
+    <div class="myForm">
+        <h2>Food Order</h2>
+        <form id="food-form-data" action="">
+            <div class="input">
+                <label class="input-Name" for="firstName">first Name</label>
+                <input type="text" id="firstName" name="firstName"  placeholder="firstName" required>
+            </div>
+            <div class="input">
+                <label class="input-Name" for="lastName">last Name</label>
+                <input type="text" id="lastName" name="lasttName" placeholder="lastName" required>
+            </div>
+            <div class="input">
+                <label class="input-Name" for="address">Address</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <div class="input">
+                <label class="input-Name" for="pincode">Pincode</label>
+                <input type="text" id="pincode" name="pincode" required>
+            </div>
+            <div class="radio">
+                <label id="gender">Gender:
+                    <input type="radio" name="gender" value="Male"> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Female"> Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="other"> Other
+                </label>
+            </div>     
+            <div class="food-items">
+                <label>Foods :
+                <input type="checkbox" name="food" value="Pizza"> Pizza
+                </label>
+                <label>
+                    <input type="checkbox" name="food" value="Briyani"> Briyani
+                </label>
+                <label>
+                    <input type="checkbox" name="food" value="Burger"> Burger
+                </label>
+                <label>
+                    <input type="checkbox" name="food" value="Noodles"> Noodles
+                </label>
+                <label>
+                    <input type="checkbox" name="food" value="Pasta"> Pasta
+                </label>
+            </div>
+            <div class="input">
+                <label class="input-Name" for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="input">
+                <label class="input-Name" for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+    
+            <div class="btn">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <table class="myTable">
+        <thead class="table-head">
+            <tr>
+                <th>first Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Pincode</th>
+                <th>Gender</th>
+                <th>Foods</th>
+                <th>State</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
